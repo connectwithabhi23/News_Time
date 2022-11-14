@@ -1,0 +1,83 @@
+// useEffect(()=>{
+
+ 
+  
+  //  async function loadNewsBySources(){
+  //   console.log(data.source)
+    
+  //   const res = await fetch(`https://newsapi.org/v2/everything?sources=${data.source}&apiKey=aa7d6189e4a94fd2bc09ea2b27324d5a&pageSize=5&page=1`)
+  //   const parseddata =await res.json()
+  //   console.log(parseddata)
+    
+
+    // const obj = {category :'everything', query:`sources=${agency}`, page :1}
+    // const newsArticles = await fetchNews(obj)
+    // console.log(newsArticles);
+  //}
+  // if(data.category==='everything'){
+  //   loadNewsBySources()
+  // }
+  
+// },[data.category,data.source])
+
+
+
+
+
+
+    // const fetchMoreData= async()=>{
+//https://newsapi.org/v2/top-headlines?country=us&category=general&apiKey=aa7d6189e4a94fd2bc09ea2b27324d5a&pageSize=8&page=${page}    //     const url = ``
+    //     setPage(page+1);
+    //     let res = await fetch(url)
+    //     let data = await res.json()
+    //     setNewsArticles([...newsArticles,...data.articles])
+    //     setTotalResults(data.totalResults)
+        
+
+    // }
+
+
+
+        // useEffect(() => {
+    
+    //   let cancel
+    //   axios({
+    //     method: 'GET',
+    //     url: 'https://newsapi.org/v2/top-headlines?country=us&category=general&apiKey=aa7d6189e4a94fd2bc09ea2b27324d5a',
+    //     params: { q: query, page: page },
+    //     cancelToken: new axios.CancelToken(c => cancel = c)
+    //   }).then(res => {
+    //     console.log(res)
+     
+    //   }).catch(e => {
+    //     if (axios.isCancel(e)) return
+       
+    //   })
+    //   return () => cancel()
+    // }, [query])
+
+
+      // const handleChange = (e)=>{
+    //   setQuery(e.target.value)
+    // }
+
+
+        // const updateNews = async()=>{
+    //     const url = `https://newsapi.org/v2/top-headlines?country=us&category=general&apiKey=aa7d6189e4a94fd2bc09ea2b27324d5a&pageSize=8&page=${page}`
+    //     let res = await fetch(url)
+    //     let data = await res.json()
+    //     setNewsArticles(data.articles)
+    //     setTotalResults(data.totalResults)
+    //     setLoading(false)
+    // }
+
+
+
+        // const [page,setPage] = useState(1);
+    // const [loading,setLoading] = useState(true)
+    // const [newsArticles,setNewsArticles] = useState([])
+    // const [totalResults,setTotalResults] = useState(0)
+    // const [query, setQuery] = useState('')
+    // const [sources, setSources] = useState([])
+    // const [source, setSource] = useState('')
+    // const [category,setCategory] = useState('top-headlines')
