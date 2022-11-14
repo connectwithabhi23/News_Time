@@ -8,7 +8,7 @@ export const fetchSources = async () => {
     try {
        
         // const { data: { sources } } = await axios.get(`${url}/${requestSource}${api}`);
-        const {data:{sources}} = await axios.get(`https://github.com/Rob--W/cors-anywhere/https://newsapi.org/v2/sources?apiKey=${api}`)
+        const {data:{sources}} = await axios.get(`https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/sources?apiKey=${api}`)
        
         //console.log(sources)
 
@@ -25,15 +25,15 @@ export const fetchNews = async (request,page) => {
 
         if(request.category==='top-headlines'){
 
-            url = `https://github.com/Rob--W/cors-anywhere/https://newsapi.org/v2/${request.category}?country=us&apiKey=${api}&pageSize=8&page=${page}`
+            url = `https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/${request.category}?country=us&apiKey=${api}&pageSize=8&page=${page}`
 
         }
       if (request.category==='keyword'){
-            url = `https://github.com/Rob--W/cors-anywhere/https://newsapi.org/v2/everything?q=${request.input}&pageSize=10&apiKey=${api}&page=${page}`
+            url = `https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/everything?q=${request.input}&pageSize=10&apiKey=${api}&page=${page}`
         }
 
         if(request.category==='everything'){
-            url = `https://github.com/Rob--W/cors-anywhere/https://newsapi.org/v2/everything?sources=${request.source}&pageSize=10&apiKey=${api}&page=${page}`
+            url = `https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/everything?sources=${request.source}&pageSize=10&apiKey=${api}&page=${page}`
           
 
         }
