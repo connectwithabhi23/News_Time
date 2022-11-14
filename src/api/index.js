@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const api = '1e54f63972d24682ac44eedaaf9c94a2'
+const api = '711fc8b76d3841deaed2593e353d4922'
 let url = 'https://newsapi.org/v2';
 
 export const fetchSources = async () => {
@@ -54,3 +54,4 @@ export const fetchNews = async (request,page) => {
       //search by keyword:-https://newsapi.org/v2/everything?q=ABC%20News&pageSize=10&apiKey=&page=1
       //top headlines when component mounts :- https://newsapi.org/v2/top-headlines?country=us&apiKey=&pageSize=8&page=2
       // 1e54f63972d24682ac44eedaaf9c94a2
+      //711fc8b76d3841deaed2593e353d4922

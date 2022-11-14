@@ -18,7 +18,7 @@ nav{
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
-  background-color: #14d4d4;
+  background-color: rgb(241, 239, 227);
   
 }
 
@@ -28,7 +28,7 @@ nav{
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-gap: 20px;
-  transition: all 0.5s ease-out
+  /* transition: all 0.2s linear */
   
 }
 
