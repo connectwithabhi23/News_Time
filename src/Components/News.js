@@ -34,8 +34,10 @@ function News() {
 
   // To get the source selected setting source value
 const handleClick=(e)=>{
-  
+  if(data.source !== e.target.id ){
+    setPage(1)  
   setData({...data, articles:[], source :e.target.id, category:'everything'})
+  }
 }
 
 
@@ -51,11 +53,15 @@ useEffect(()=>{
     }
     else{
       setDisplayResult(true)
-    }
- 
-  const newArticles = data.articles.concat(res.articles)
   
-  setData({...data,articles: newArticles , totalResults : res.totalResults})
+    }
+
+    if(res.articles){
+      const newArticles = data.articles.concat(res.articles)
+    
+    setData({...data,articles: newArticles , totalResults : res.totalResults})
+    }
+  
   }
 
   getNews()
@@ -70,7 +76,7 @@ const change = (e) => {
  
 
   if (str.trim().length == 0){
-
+    setPage(1);
     setData({...data, category:'top-headlines',input:'' })
   }
 
@@ -99,6 +105,7 @@ const inputChange = useCallback(debounce(change), []);
 // To set the page no
 const nextPage = ()=>{
 
+  if(page < 10 && data.articles.length < data.totalResults)
   setPage((prev)=> prev+1)
 }
 
@@ -138,7 +145,7 @@ return(
         <InfiniteScroll
          dataLength={data.articles.length}
          next={nextPage}
-         hasMore={data.articles.length <= data.totalResults}
+         hasMore={data.articles.length<data.totalResults && page <10}
          loader={<Spinner/>}
         >
             <div className='all__news'>
@@ -156,8 +163,6 @@ return(
             })}
 
             </div>
-            
-           
 
         </InfiniteScroll> 
       
