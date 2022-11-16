@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const api = '1e54f63972d24682ac44eedaaf9c94a2';
+const api = '57814988adb344718a5729c6c928240c';
 let url = 'https://newsapi.org/v2';
 
 export const fetchSources = async () => {
