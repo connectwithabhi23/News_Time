@@ -8,7 +8,8 @@ export const fetchSources = async () => {
     try {
        
       
-        const {data:{sources}} = await axios.get(`https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/sources?apiKey=${api}`)
+       // const {data:{sources}} = await axios.get(`https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/sources?apiKey=${api}`)
+         const {data:{sources}} = await axios.get(`https://corsanywhere.herokuapp.com/http://newsapi.org/v2/sources?apiKey=57814988adb344718a5729c6c928240c`)
 
         return sources.map((source) => source);
     } 
@@ -23,18 +24,18 @@ export const fetchNews = async (request,page) => {
 
         if(request.category==='top-headlines'){
 
-            url = `https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/${request.category}?country=us&apiKey=${api}&pageSize=8&page=${page}`
+            url = `https://corsanywhere.herokuapp.com/http://newsapi.org/v2/${request.category}?country=us&apiKey=${api}&pageSize=8&page=${page}`
 
         }
         
        if (request.category==='keyword'){
            
-            url = `https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/everything?q=${request.input}&pageSize=10&apiKey=${api}&page=${page}`
+            url = `https://corsanywhere.herokuapp.com/http://newsapi.org/v2/everything?q=${request.input}&pageSize=10&apiKey=${api}&page=${page}`
         }
 
        if(request.category==='everything'){
            
-           url = `https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/everything?sources=${request.source}&pageSize=10&apiKey=${api}&page=${page}`
+           url = `https://corsanywhere.herokuapp.com/http://newsapi.org/v2/everything?sources=${request.source}&pageSize=10&apiKey=${api}&page=${page}`
 
         }
 
